@@ -1,0 +1,20 @@
+# Configuración del Entorno de Base de Datos
+database:
+  server: "localhost"
+  db_name: "DataWarehouseExito"
+  driver: "ODBC Driver 17 for SQL Server"
+ 
+# Configuración de las Tablas de Destino
+tables:
+  staging: "STG_Ventas"
+  dwh: "DWH_Ventas_Historico"
+
+# Definición del Esquema (Columnas esperadas de SharePoint)
+schema:
+  columnas_origen:
+    - "ID_Transaccion"
+    - "Fecha_Venta"
+    - "Ciudad_Tienda"
+    - "Producto"
+    - "Cantidad"
+    - "Precio_Unitario"
